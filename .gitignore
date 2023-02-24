@@ -28,3 +28,6 @@ hs_err_pid*
 # Gradle folders
 .gradle
 /build/
+
+# Don't ignore Gradle wrapper
+!/gradle/wrapper/gradle-wrapper.jar
