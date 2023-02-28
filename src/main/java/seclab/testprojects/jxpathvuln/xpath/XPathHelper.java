@@ -4,7 +4,7 @@ import org.apache.commons.jxpath.JXPathContext;
 
 public class XPathHelper {
 
-    private JXPathContext context;
+    private final JXPathContext context;
 
     public XPathHelper(JXPathContext context) {
         this.context = context;
