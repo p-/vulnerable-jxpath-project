@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 
+import static seclab.testprojects.jxpathvuln.util.Errors.ERROR_REMOTE_SOURCE;
+
 public class RemoteReader extends Reader {
     private final BufferedReader in;
 
@@ -14,7 +16,7 @@ public class RemoteReader extends Reader {
             URL url = new URL(remoteUrl);
             in = new BufferedReader(new InputStreamReader(url.openStream()));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(ERROR_REMOTE_SOURCE, e);
         }
     }
 
