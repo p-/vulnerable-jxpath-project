@@ -18,4 +18,9 @@ public class XPathHelper {
         var pathExpression = "addresses/home/city";
         return (String)context.getValue(pathExpression);
     }
+
+    public String pathAdjuster(String path) { //
+        StringBuilder pathAjusted = new StringBuilder(path);
+        return pathAjusted.toString().replace("@", "");
+    }
 }
